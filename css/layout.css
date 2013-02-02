@@ -32,3 +32,12 @@ section[role="region"] > header:first-child .icon.icon-reload {
 [data-type="list"] li > a {
     height: 4em;
 }
+
+.loading .icon-reload {
+  animation: 3s rotate infinite steps(30);
+}
+
+@keyframes rotate {
+  from { transform: rotate(1deg); }
+  to { transform: rotate(360deg); }
+}
