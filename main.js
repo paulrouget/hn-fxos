@@ -1,7 +1,7 @@
 window.onload = fetch;
 
 function fetch() {
-  document.body.className.add("loading");
+  document.body.classList.add("loading");
   var url = "http://hndroidapi.appspot.com/news/format/json?callback=onceFetched";
   var script = document.createElement("script");
   script.setAttribute("src", url);
@@ -33,7 +33,7 @@ function onceFetched(data) {
   var ul = document.querySelector("ul");
   ul.innerHTML = "";
   ul.appendChild(fragment);
-  document.body.className.remove("loading");
+  document.body.classList.remove("loading");
 }
 
 
