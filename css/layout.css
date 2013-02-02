@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 #install {
     display: none;
 }
@@ -6,15 +10,25 @@
     display: inline-block;
 }
 
-body {
-  margin: 0;
-  font: 1.6rem/2.2rem System Sans, Sans-serif;
-}
-
 .icon-reload {
   background-image: url(../images/reload.png);
 }
 
 section[role="region"] > header:first-child .icon.icon-reload {
   background-image: url(../images/reload.png);
+}
+
+[data-type="list"] li p:first-of-type {
+    font-size: 1em;
+    line-height: 1.2rem;
+}
+
+[data-type="list"] li p {
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+
+[data-type="list"] li,
+[data-type="list"] li > a {
+    height: 4em;
 }

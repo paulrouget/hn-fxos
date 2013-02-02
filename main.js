@@ -13,20 +13,18 @@ function onceFetched(data) {
     var title = data.items[i].title;
     var url = data.items[i].url;
     var score = data.items[i].score;
+    var desc = data.items[i].description;
 
     var a = document.createElement("a");
     a.href = url;
+    a.targe = "_";
     var t = document.createElement("p");
     t.textContent = title;
-    var u = document.createElement("p");
-    u.textContent = url;
+    var d = document.createElement("p");
+    d.textContent = desc;
     a.appendChild(t);
-    a.appendChild(u);
-    var aside = document.createElement("aside");
-    aside.textContent = score;
-    aside.setAttribute("style", "float:right");
+    a.appendChild(d);
     var li = document.createElement("li");
-    li.appendChild(aside);
     li.appendChild(a);
 
     fragment.appendChild(li);
