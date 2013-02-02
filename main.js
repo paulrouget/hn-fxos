@@ -18,7 +18,7 @@ function onceFetched(data) {
 
     var a = document.createElement("a");
     a.href = url;
-    a.targe = "_";
+    a.target = "_";
     var t = document.createElement("p");
     t.textContent = title;
     var d = document.createElement("p");

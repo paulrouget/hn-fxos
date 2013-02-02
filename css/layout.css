@@ -41,3 +41,7 @@ section[role="region"] > header:first-child .icon.icon-reload {
   from { transform: rotate(1deg); }
   to { transform: rotate(360deg); }
 }
+
+#install:not(.show-install) {
+  display: none;
+}
