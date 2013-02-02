@@ -1,6 +1,6 @@
 {
-    "version": "1.1",
-    "name": "hackernews",
+    "version": "2",
+    "name": "hckrnws",
     "launch_path": "/hn-fxos/index.html",
     "description": "Hackernews client",
     "icons": {
