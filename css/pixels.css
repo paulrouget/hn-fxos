@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.icon-reload {
+  background-image: url(../images/reload.png);
+}
+
+section[role="region"] > header:first-child .icon.icon-reload {
+  background-image: url(../images/reload.png);
+}

@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+}
+
+#install {
+    display: none;
+}
+
+#install.show-install {
+    display: inline-block;
+}
