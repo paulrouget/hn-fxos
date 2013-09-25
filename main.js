@@ -2,7 +2,7 @@ window.onload = fetch;
 
 function fetch() {
   document.body.classList.add("loading");
-  var url = "http://hndroidapi.appspot.com/news/format/json?callback=onceFetched";
+  var url = "http://api.ihackernews.com/page?format=jsonp&callback=onceFetched";
   var script = document.createElement("script");
   script.setAttribute("src", url);
   document.head.appendChild(script);
@@ -13,20 +13,47 @@ function onceFetched(data) {
   for (var i = 0; i < data.items.length; i++) {
     var title = data.items[i].title;
     var url = data.items[i].url;
-    var score = data.items[i].score;
-    var desc = data.items[i].description;
+    var points = data.items[i].points + " points";
+    var comments = data.items[i].commentCount + " comments";
+    var when = data.items[i].postedAgo;
+    var who = data.items[i].postedBy;
+    var icon = "http://g.etfv.co/" + url;
 
     var a = document.createElement("a");
     a.href = url;
     a.target = "_";
-    var t = document.createElement("p");
-    t.textContent = title;
-    var d = document.createElement("p");
-    d.textContent = desc;
-    a.appendChild(t);
-    a.appendChild(d);
+    a.textContent = title;
+
+    pointsSpan = document.createElement("span");
+    pointsSpan.className = "points";
+    pointsSpan.textContent = points;
+
+    commentsSpan = document.createElement("span");
+    commentsSpan.className = "comments";
+    commentsSpan.textContent = comments;
+
+    whenSpan = document.createElement("span");
+    whenSpan.className = "when";
+    whenSpan.textContent = when;
+
+    whoSpan = document.createElement("span");
+    whoSpan.className = "who";
+    whoSpan.textContent = who;
+
+    var img = document.createElement("img");
+    img.src = icon;
+
+    var div = document.createElement("div");
+    div.className = "meta";
+    div.appendChild(pointsSpan);
+    div.appendChild(commentsSpan);
+    div.appendChild(whenSpan);
+    div.appendChild(whoSpan);
+
     var li = document.createElement("li");
+    li.appendChild(img);
     li.appendChild(a);
+    li.appendChild(div);
 
     fragment.appendChild(li);
   }

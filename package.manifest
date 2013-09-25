@@ -1,9 +1,0 @@
-{
-    "name": "hackernews",
-    "package_path" : "http://paulrouget.com/hn-fxos/install.zip",
-    "version": "1",
-    "developer": {
-        "name": "Paul Rouget",
-        "url": "http://paulrouget.com"
-    }
-}
