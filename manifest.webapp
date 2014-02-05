@@ -1,12 +1,18 @@
 {
-    "name": "hn",
-    "description": "Basic Hackernews client",
-    "icons": {
-        "128": "/images/logo128.png"
-    },
-    "launch_path": "/index.html",
-    "developer": {
-        "name": "Paul Rouget",
-        "url": "http://paulrouget.com"
-    }
+  "name": "hn",
+  "description": "Basic Hackernews client",
+  "icons": {
+    "128": "/images/logo128.png"
+  },
+  "fullscreen": "true",
+  "permissions": {
+    "browser": {},
+    "systemXHR": {}
+  },
+  "type": "privileged",
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "Paul Rouget",
+    "url": "http://paulrouget.com"
+  }
 }

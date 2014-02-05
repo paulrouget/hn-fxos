@@ -6,22 +6,30 @@
     <link rel="stylesheet" type="text/css" href="shared/style/headers.css">
     <link rel="stylesheet" type="text/css" href="shared/style/buttons.css">
     <link rel="stylesheet" type="text/css" href="css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome.css"/>
     <title>hackernews</title>
   </head>
 
-  <body class="loading">
+  <body>
 
     <section role="region">
       <header>
         <menu type="toolbar">
-          <a href="#" onclick="fetch()"><span class="icon icon-reload">reload</span></a>
+          <a id="reload" href="#"><span class="fa fa-refresh"></span></a>
         </menu>
         <h1>HN</h1>
       </header>
     </section>
 
     <section data-type="list">
-      <ul>loading...</ul>
+      <ul>
+        <section class="intro">
+          <div class="fa fa-archive"></div>
+          <div class="fa fa-cloud-upload"></div>
+          <div class="fa fa-comment-o"></div>
+          <div class="fa fa-user"></div>
+        </section>
+      </ul>
     </section>
 
     <a href="#" role="button" class="recommend" id="install">Install</a>

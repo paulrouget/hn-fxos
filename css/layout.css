@@ -4,6 +4,8 @@
 
 body {
   margin: 0;
+  background: white;
+  padding-top: 70px;
 }
 
 #install {
@@ -14,16 +16,14 @@ body {
     display: inline-block;
 }
 
-.icon-reload {
-  background-image: url(../images/reload.png);
+header {
+    position: fixed !important;
+    top: 0;
+    width: 100%;
 }
 
-section[role="region"] > header:first-child .icon.icon-reload {
-  background-image: url(../images/reload.png);
-}
-
-.loading .icon-reload {
-  animation: 3s rotate infinite steps(30);
+.loading .fa-refresh {
+  animation: 1s rotate infinite steps(30);
 }
 
 @keyframes rotate {
@@ -39,6 +39,7 @@ ul {
   list-style: none;
   font-size: 1.4rem;
   padding: 0 10px;
+  height: 50%;
 }
 
 img {
@@ -53,7 +54,15 @@ li {
   text-overflow: ellipsis;
   white-space: nowrap;
   max-width: 100%;
-  margin-bottom: 20px;
+  position: relative;
+  min-height: 6rem;
+  margin: 20px 0.5rem;
+  border-bottom: 0.1rem solid #E6E6E3;
+  color: #000;  
+}
+
+.who {
+    display: none;
 }
 
 li > a,
@@ -74,3 +83,22 @@ li > a:visited {
 }
 
 
+.intro {
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.intro > .fa {
+    display: inline-block;
+    text-align: center;
+    line-height: 70px;
+    margin: 10px;
+    width: 70px;
+    height: 70px;
+    background: #FEFEFE;
+    outline: 1px dashed #E0E5E5;
+    font-size: 50px;
+}
